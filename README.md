@@ -16,7 +16,9 @@ Python 3.5.2
 $ pip install -r requirements.txt
 ```
 
-## 使用 docker-compose 本地编配
+## 本地编配
+
+使用 docker-compose 本地编配：
 
 ```bash
 $ docker-compose up
