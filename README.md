@@ -11,6 +11,7 @@ Python 3.5.2
 
 - [Flask](http://flask.pocoo.org/)
 - [Redis](https://github.com/rgl/redis/downloads)
+- [Azure CLI](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli-apt?view=azure-cli-latest)
 
 ```bash
 $ pip install -r requirements.txt
@@ -27,6 +28,23 @@ $ docker-compose up
 开打浏览器，可见页面上显示了当前计数值。刷新网站，会看到这个值增加：
 
 ![image](https://github.com/foamliu/Wechat-Applet/raw/master/images/docker-compose.png)
+
+
+## 配置微软云
+
+1.安装 kubectl：
+
+```bash
+$ az aks install-cli
+```
+
+2.在微软云创建一个资源组：myResourceGroup
+
+3.创建 AKS 集群：
+
+```bash
+$ az aks create --resource-group myResourceGroup --name myAKSCluster --node-count 2 --generate-ssh-keys
+```
 
 ## 构建镜像并推送到微软云镜像仓库
 
