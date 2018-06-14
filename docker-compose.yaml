@@ -1,0 +1,16 @@
+version: '3'
+services:
+  wechat-applet-back:
+    image: redis
+    container_name: wechat-applet-back
+    ports:
+        - "6379:6379"
+
+  wechat-applet-front:
+    build: ./wechat-applet
+    image: wechat-applet-front
+    container_name: wechat-applet-front
+    environment:
+      REDIS: wechat-applet-back
+    ports:
+        - "8080:80"

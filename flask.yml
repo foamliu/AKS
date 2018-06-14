@@ -1,0 +1,10 @@
+web:
+    image: registry.aliyuncs.com/acs-sample/flask
+    ports:
+        - 5000
+    links:
+        - redis
+    labels:
+        aliyun.routing.port_5000: "flask"
+redis:
+    image: redis
