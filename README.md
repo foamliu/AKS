@@ -38,7 +38,7 @@ $ docker-compose up
 $ az aks install-cli
 ```
 
-2.在微软云创建一个资源组：myResourceGroup
+2.在微软云创建一个资源组：“myResourceGroup”
 
 3.创建 AKS 集群：
 
@@ -46,7 +46,7 @@ $ az aks install-cli
 $ az aks create --resource-group myResourceGroup --name myAKSCluster --node-count 2 --generate-ssh-keys
 ```
 
-## 构建镜像并推送到微软云镜像仓库
+4.构建镜像并推送到微软云镜像仓库
 
 使用az acr create 命令创建Azure镜像仓库:
 
