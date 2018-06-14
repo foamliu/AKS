@@ -2,11 +2,12 @@
 
 ## 开发环境
 Windows 10 (64位)
+
 Python 3.5.2
 
 ## 安装依赖项
 
-- [Flask](http://docs.scipy.org/doc/numpy-1.10.1/user/install.html)
+- [Flask](http://flask.pocoo.org/)
 - [Redis](https://github.com/rgl/redis/downloads)
 
 ```bash
