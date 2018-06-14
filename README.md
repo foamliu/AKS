@@ -3,7 +3,7 @@
 在微软云容器服务上创建基于 Python 和 Redis 的微信小程序
 
 ## 开发环境
-Windows 10 (64位)
+Ubuntu 16.04 (64位)
 
 Python 3.5.2
 
@@ -15,6 +15,16 @@ Python 3.5.2
 ```bash
 $ pip install -r requirements.txt
 ```
+
+## 使用 docker-compose 本地编配
+
+```bash
+$ docker-compose up
+```
+
+开打浏览器，可见页面上显示了当前计数值。刷新网站，会看到这个值增加：
+
+![image](https://github.com/foamliu/Wechat-Applet/raw/master/images/docker-compose.png)
 
 ## 构建镜像并推送到微软云镜像仓库
 
