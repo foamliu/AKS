@@ -13,4 +13,4 @@ services:
     environment:
       REDIS: wechat-applet-back
     ports:
-        - "5000:80"
+        - "80:5000"
