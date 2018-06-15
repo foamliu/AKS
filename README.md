@@ -1,9 +1,9 @@
-# AI 体验中心
+# 微软云 Kubernetes 部署演示
 
-在微软云容器服务上创建基于 Python 和 Redis 的微信小程序
+在微软云容器服务上创建基于 Python 和 Redis 的 Web App
 
 ## 开发环境
-Ubuntu 16.04 (64位)
+Windows 10 (64位)
 
 Python 3.5.2
 
