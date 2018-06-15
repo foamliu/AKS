@@ -114,6 +114,37 @@ $ docker push foamliu.azurecr.io/wechatapplet_web
 
 ![image](https://github.com/foamliu/Wechat-Applet/raw/master/images/docker_push.png)
 
+## 配置微软云镜像仓库权限
+
+微软云镜像仓库是有权限控制的，这一步授予 Kubernetes 集群适当权限以便从仓库中拉取镜像。
+
+1.获取Kubernetes集群的服务主体的ID:
+
+```bash
+$ az aks show --resource-group myResourceGroup --name myAKSCluster --query "servicePrincipalProfile.clientId" --output tsv
+```
+
+2.获取微软云镜像仓库注册资源ID:
+
+```bash
+$ az acr show --name foamliu --resource-group myResourceGroup --query "id" --output tsv
+```
+
+3.授予适当访问权限:
+
+```bash
+$ az role assignment create --assignee <clientID> --role Reader --scope <acrID>
+```
+
+在本例中：
+
+```bash
+$ az role assignment create --assignee d70664cc-a594-4a26-9e3a-a78a0a9b4eb5 --role Reader --scope /subscriptions/2d1be81d-3f23-45a2-9b27-07f8477bedd4/resourceGroups/myResourceGroup/providers/Microsoft.ContainerRegistry/registries/foamliu
+```
+
+![image](https://github.com/foamliu/Wechat-Applet/raw/master/images/az_role_assignment.png)
+
+
 ## 运行应用
 
 1.使用 kubectl apply 命令运行应用:
