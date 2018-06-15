@@ -30,6 +30,14 @@ $ docker-compose up
 
 ![image](https://github.com/foamliu/Wechat-Applet/raw/master/images/docker-compose.png)
 
+使用docker images命令可查看镜像列表:
+
+```bash
+$ docker images
+```
+
+![image](https://github.com/foamliu/Wechat-Applet/raw/master/images/docker_images.png)
+
 
 ## 配置微软云
 
