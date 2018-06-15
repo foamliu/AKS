@@ -44,7 +44,7 @@ spec:
     spec:
       containers:
       - name: wechat-applet-front
-        image: foamliu.azurecr.io/wechatapplet_web:v1
+        image: foamliu.azurecr.io/wechat-applet-front:v1
         ports:
         - containerPort: 5000
         resources:
