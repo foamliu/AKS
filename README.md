@@ -47,7 +47,11 @@ $ docker images
 $ az aks install-cli
 ```
 
-2.在微软云创建一个资源组：“myResourceGroup”
+2.在微软云创建一个资源组：“myResourceGroup”:
+
+```bash
+$ az group create --name myResourceGroup --location eastus
+```
 
 3.创建 AKS 集群:
 
@@ -166,14 +170,3 @@ $ kubectl get service wechat-applet-front --watch
 ![image](https://github.com/foamliu/Wechat-Applet/raw/master/images/kubectl_get_service.png)
 
 
-
-构建镜像并推送到微软云镜像仓库
-
-使用az acr create 命令创建Azure镜像仓库:
-
-```bash
-$ az acr create --resource-group azureimgbot --name WechatAppletReg --sku Basic
-```
-
-
-docker build -t registry.aliyuncs.com/acs-sample/flask .
