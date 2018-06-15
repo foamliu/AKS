@@ -11,11 +11,12 @@ Python 3.5.2
 
 - [Flask](http://flask.pocoo.org/)
 - [Redis](https://github.com/rgl/redis/downloads)
-- [Azure CLI](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli-apt?view=azure-cli-latest)
 
 ```bash
 $ pip install -r requirements.txt
 ```
+
+- [Azure CLI](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli-apt?view=azure-cli-latest)
 
 ## 本地编配
 
