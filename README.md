@@ -20,20 +20,20 @@ $ pip install -r requirements.txt
 
 ## 本地编配
 
-使用 docker-compose 本地编配：
+使用 docker-compose 本地编配:
 
 ```bash
 $ docker-compose up
 ```
 
-开打浏览器，可见页面上显示了当前计数值。刷新网站，会看到这个值增加：
+开打浏览器，可见页面上显示了当前计数值。刷新网站，会看到这个值增加:
 
 ![image](https://github.com/foamliu/Wechat-Applet/raw/master/images/docker-compose.png)
 
 
 ## 配置微软云
 
-1.安装 kubectl：
+1.安装 kubectl:
 
 ```bash
 $ az aks install-cli
@@ -41,7 +41,7 @@ $ az aks install-cli
 
 2.在微软云创建一个资源组：“myResourceGroup”
 
-3.创建 AKS 集群：
+3.创建 AKS 集群:
 
 ```bash
 $ az aks create --resource-group myResourceGroup --name myAKSCluster --node-count 2 --generate-ssh-keys
@@ -49,15 +49,15 @@ $ az aks create --resource-group myResourceGroup --name myAKSCluster --node-coun
 
 4.将kubectl配置为连接到Kubernetes集群
 
-使用az aks get-credentials命令，此步骤下载凭证并配置Kubernetes CLI以使用它们：
+使用az aks get-credentials命令，此步骤下载凭证并配置Kubernetes CLI以使用它们:
 
 ```bash
 $ az aks get-credentials --resource-group myResourceGroup --name myAKSCluster
 ```
 
-5.验证与群集的连接，
+5.验证与群集的连接
 
-使用kubectl get命令返回群集节点的列表。 
+使用kubectl get命令返回群集节点的列表:
 
 ```bash
 $ kubectl get nodes
@@ -65,7 +65,13 @@ $ kubectl get nodes
 
 ![image](https://github.com/foamliu/Wechat-Applet/raw/master/images/azure.png)
 
-4.构建镜像并推送到微软云镜像仓库
+6.使用 kubectl apply 命令运行应用程序:
+
+```bash
+$ kubectl apply -f docker-compose.yaml
+```
+
+构建镜像并推送到微软云镜像仓库
 
 使用az acr create 命令创建Azure镜像仓库:
 
