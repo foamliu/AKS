@@ -73,7 +73,50 @@ $ kubectl get nodes
 
 ![image](https://github.com/foamliu/Wechat-Applet/raw/master/images/azure.png)
 
-6.使用 kubectl apply 命令运行应用程序:
+
+## 推送镜像到微软云仓库
+
+1.创建Azure镜像仓库:
+
+```bash
+$ az acr create --resource-group myResourceGroup --name foamliu --sku Basic
+```
+
+2.测试可以登录:
+
+```bash
+$ az acr login --name foamliu
+```
+
+3.获取登录服务器名:
+
+```bash
+$ az acr list --resource-group myResourceGroup --query "[].{acrLoginServer:loginServer}" --output table
+```
+
+4.给本地容器打标:
+
+```bash
+$ docker tag wechatapplet_web foamliu.azurecr.io/wechatapplet_web:v1
+```
+
+5.查看镜像，确认标签已经打上去:
+
+```bash
+$ docker images
+```
+
+6.推送镜像到微软云仓库:
+
+```bash
+$ docker push foamliu.azurecr.io/wechatapplet_web
+```
+
+![image](https://github.com/foamliu/Wechat-Applet/raw/master/images/docker_push.png)
+
+## 运行应用
+
+1.使用 kubectl apply 命令运行应用:
 
 ```bash
 $ kubectl apply -f wechat-applet.yaml
