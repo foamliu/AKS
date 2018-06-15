@@ -63,6 +63,8 @@ $ az aks get-credentials --resource-group myResourceGroup --name myAKSCluster
 $ kubectl get nodes
 ```
 
+![image](https://github.com/foamliu/Wechat-Applet/raw/master/images/azure.png)
+
 4.构建镜像并推送到微软云镜像仓库
 
 使用az acr create 命令创建Azure镜像仓库:
