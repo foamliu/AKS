@@ -81,6 +81,10 @@ $ kubectl get service wechat-applet-front --watch
 
 一旦EXTERNAL-IP地址从Pending状态变为IP地址，即可按CTRL-C停止kubectl监视进程。
 
+![image](https://github.com/foamliu/Wechat-Applet/raw/master/images/kubectl_apply.png)
+
+
+
 构建镜像并推送到微软云镜像仓库
 
 使用az acr create 命令创建Azure镜像仓库:
