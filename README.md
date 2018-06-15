@@ -101,7 +101,7 @@ $ az acr list --resource-group myResourceGroup --query "[].{acrLoginServer:login
 4.给本地容器打标:
 
 ```bash
-$ docker tag wechatapplet_web foamliu.azurecr.io/wechatapplet_web:v1
+$ docker tag wechat-applet-front foamliu.azurecr.io/wechat-applet-front:v1
 ```
 
 5.查看镜像，确认标签已经打上去:
@@ -113,7 +113,7 @@ $ docker images
 6.推送镜像到微软云仓库:
 
 ```bash
-$ docker push foamliu.azurecr.io/wechatapplet_web
+$ docker push foamliu.azurecr.io/wechat-applet-front:v1
 ```
 
 ![image](https://github.com/foamliu/Wechat-Applet/raw/master/images/docker_push.png)
