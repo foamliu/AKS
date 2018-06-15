@@ -165,8 +165,14 @@ $ kubectl apply -f wechat-applet.yaml
 $ kubectl get service wechat-applet-front --watch
 ```
 
-一旦EXTERNAL-IP地址从Pending状态变为IP地址，即可按CTRL-C停止kubectl监视进程。
+一旦EXTERNAL-IP地址从 <pending> 状态变为IP地址，即可按CTRL-C停止kubectl监视进程。
 
 ![image](https://github.com/foamliu/Wechat-Applet/raw/master/images/kubectl_get_service.png)
 
+2.查看Kubernetes仪表板
 
+```bash
+$ az aks browse --resource-group myResourceGroup --name myAKSCluster
+```
+
+![image](https://github.com/foamliu/Wechat-Applet/raw/master/images/kubernetes_dashboard.png)
