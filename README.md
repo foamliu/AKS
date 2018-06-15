@@ -73,6 +73,13 @@ $ kubectl apply -f wechat-applet.yaml
 
 ![image](https://github.com/foamliu/Wechat-Applet/raw/master/images/kubectl_apply.png)
 
+在应用运行时，将创建一个Kubernetes服务，将应用前端开放。要监视进度，使用带有--watch参数的 kubectl get service命令:
+
+```bash
+$ kubectl get service wechat-applet-front --watch
+```
+
+一旦EXTERNAL-IP地址从Pending状态变为IP地址，即可按CTRL-C停止kubectl监视进程。
 
 构建镜像并推送到微软云镜像仓库
 
