@@ -68,7 +68,7 @@ $ kubectl get nodes
 6.使用 kubectl apply 命令运行应用程序:
 
 ```bash
-$ kubectl apply -f docker-compose.yaml
+$ kubectl apply -f wechat-applet.yaml
 ```
 
 构建镜像并推送到微软云镜像仓库
