@@ -47,6 +47,22 @@ $ az aks install-cli
 $ az aks create --resource-group myResourceGroup --name myAKSCluster --node-count 2 --generate-ssh-keys
 ```
 
+4.将kubectl配置为连接到Kubernetes集群
+
+使用az aks get-credentials命令，此步骤下载凭证并配置Kubernetes CLI以使用它们：
+
+```bash
+$ az aks get-credentials --resource-group myResourceGroup --name myAKSCluster
+```
+
+5.验证与群集的连接，
+
+使用kubectl get命令返回群集节点的列表。 
+
+```bash
+$ kubectl get nodes
+```
+
 4.构建镜像并推送到微软云镜像仓库
 
 使用az acr create 命令创建Azure镜像仓库:
